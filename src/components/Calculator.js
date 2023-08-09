@@ -1,50 +1,33 @@
+import { useState } from 'react';
+import Screen from './Screen';
+import calculate from '../logic/calculate';
+import Buttons from './Buttons';
+
 export default function Calculator() {
+  const [displayValue, setDisplayValue] = useState('0');
+  const [calcData, setCalcData] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
+
+  const handleButtonClick = (buttonName) => {
+    const newData = calculate(calcData, buttonName);
+    setCalcData(newData);
+
+    if (newData.next !== null) {
+      setDisplayValue(newData.next);
+    } else if (newData.total !== null) {
+      setDisplayValue(newData.total);
+    } else {
+      setDisplayValue('0');
+    }
+  };
+
   return (
     <div className="wrapper">
-      <Screen />
-      <Buttons />
-    </div>
-  );
-}
-
-function Screen() {
-  return (
-    <div className="screen">
-      <p>0</p>
-    </div>
-  );
-}
-
-function Buttons() {
-  return (
-    <div className="button">
-      <button type="submit" className="btn" name="AC">AC</button>
-      <button type="submit" className="btn" name="+/-">+/-</button>
-      <button type="submit" className="btn" name="%">%</button>
-      <button type="submit" className="btn orange" name="/">÷</button>
-      <br />
-
-      <button type="submit" className="btn" name="7">7</button>
-      <button type="submit" className="btn" name="8">8</button>
-      <button type="submit" className="btn" name="9">9</button>
-      <button type="submit" className="btn orange" name="x">x</button>
-      <br />
-
-      <button type="submit" className="btn" name="4">4</button>
-      <button type="submit" className="btn" name="5">5</button>
-      <button type="submit" className="btn" name="6">6</button>
-      <button type="submit" className="btn orange" name="-">-</button>
-      <br />
-
-      <button type="submit" className="btn" name="1">1</button>
-      <button type="submit" className="btn" name="2">2</button>
-      <button type="submit" className="btn" name="3">3</button>
-      <button type="submit" className="btn orange" name="+">+</button>
-      <br />
-
-      <button type="submit" className="zero" name="0">0</button>
-      <button type="submit" className="btn" name=".">.</button>
-      <button type="submit" className="btn orange" name="=">=</button>
+      <Screen displayValue={displayValue} />
+      <Buttons onButtonClick={handleButtonClick} />
     </div>
   );
 }
