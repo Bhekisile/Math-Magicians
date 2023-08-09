@@ -11,7 +11,6 @@ function Screen({ displayValue }) {
 Screen.propTypes = {
   displayValue: PropTypes.string,
 };
-
 Screen.defaultProps = {
   displayValue: '0',
 };
