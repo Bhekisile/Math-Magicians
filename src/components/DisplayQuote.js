@@ -37,7 +37,7 @@ function DisplayQuote() {
         : (
           <p className="quote">
             {data.map((item) => (
-              item.quote
+              `${item.quote} - ${item.author}`
             ))}
           </p>
         )}

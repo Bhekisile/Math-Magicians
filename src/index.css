@@ -69,14 +69,21 @@ ul {
 }
 
 .quote {
-  max-width: 400px;
+  max-width: 80%;
   min-height: 50px;
-  margin-left: 50px;
-  margin-right: 100px;
+  margin: 150px auto;
   font-size: 24px;
   font-weight: 500;
 }
 
 .content {
   display: flex;
+  margin-left: 50px;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.headingStyle {
+  font-size: 38px;
+  font-weight: 500;
 }
