@@ -1,10 +1,10 @@
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes, NavLink } from 'react-router-dom';
 import Home from './routes/Home';
 import Quote from './routes/Quote';
 import './index.css';
 import Calculator from './components/Calculator';
-import NotMatch from './routes/NotMatch';
-// import Layout from './components/Layout';
+import NotFound from './routes/NotFound';
+import './styles/App.css';
 
 export default function App() {
   return (
@@ -12,20 +12,18 @@ export default function App() {
       <div>
         <nav className="nav-bar">
           <span className="headingStyle">Math Magicians</span>
-          <ul>
-            <Link to="Home">Home |</Link>
-            <Link to="Calculator">Calculator |</Link>
-            <Link to="Quote">Quote</Link>
+          <ul className="nav-link">
+            <NavLink to="/">Home</NavLink>
+            <NavLink className="border" to="/Calculator"> Calculator</NavLink>
+            <NavLink to="/Quote">Quote</NavLink>
           </ul>
         </nav>
       </div>
       <Routes>
-        {/* <Route path="/" element={<Layout />}> */}
-        <Route path="Home" element={<Home />} />
-        <Route path="Calculator" element={<Calculator />} />
-        <Route path="Quote" element={<Quote />} />
-        <Route path="*" element={<NotMatch />} />
-        {/* </Route> */}
+        <Route path="/" element={<Home />} />
+        <Route path="/Calculator" element={<Calculator />} />
+        <Route path="/Quote" element={<Quote />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
