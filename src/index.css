@@ -1,31 +1,11 @@
 body {
   font-family: roboto, sans-serif;
+  color: rgb(105, 105, 105);
 }
 
 * {
   margin: 0;
   box-sizing: border-box;
-}
-
-.App {
-  text-align: center;
-}
-
-.nav-bar {
-  width: 95%;
-  height: 100px;
-  margin-bottom: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 50px;
-}
-
-ul {
-  display: flex;
-  list-style: none;
-  width: 25%;
-  justify-content: space-between;
 }
 
 .wrapper {
@@ -64,26 +44,22 @@ ul {
   text-align: center;
   text-transform: uppercase;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
+  color: grey;
   margin: 4.8rem;
 }
 
 .quote {
-  max-width: 80%;
+  max-width: 70%;
   min-height: 50px;
   margin: 150px auto;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .content {
+  margin: 70px 138px;
   display: flex;
-  margin-left: 50px;
   width: 80%;
   justify-content: space-between;
-}
-
-.headingStyle {
-  font-size: 38px;
-  font-weight: 500;
 }
