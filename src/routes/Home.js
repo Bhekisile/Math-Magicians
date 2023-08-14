@@ -1,12 +1,16 @@
-import LoremIpsum from 'react-lorem-ipsum';
+import loremIpsum from 'react-lorem-ipsum';
+import '../styles/Home.css';
 
 function Home() {
   return (
     <div>
-      <h2 style={{ marginLeft: '60px', marginBottom: '20px' }}>Welcome to our page!</h2>
-      <div style={{ width: '91%', margin: '10px auto' }}>
-        <LoremIpsum style={{ marginBottom: '40px', marginTop: '20px' }} />
-        <LoremIpsum p={2} />
+      <h2 style={{ margin: '60px 140px' }}>Welcome to our page!</h2>
+      <div className="text-wrapper">
+        {loremIpsum({ avgSentencesPerParagraph: 10, random: true, p: 2 }).map((text) => (
+          <div className="text" key={text}>
+            {text}
+          </div>
+        ))}
       </div>
     </div>
   );
