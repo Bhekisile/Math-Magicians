@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator Component renders the calculator with correct heading 1`] = `
+<div
+  class="content"
+>
+  <h2>
+    Let's do some math!
+  </h2>
+  <div
+    class="calc"
+  >
+    <div
+      class="screen"
+    >
+      <p>
+        1
+      </p>
+    </div>
+    <div
+      class="button"
+    >
+      <button
+        class="btn"
+        name="AC"
+        type="button"
+      >
+        AC
+      </button>
+      <button
+        class="btn"
+        name="+/-"
+        type="button"
+      >
+        +/-
+      </button>
+      <button
+        class="btn"
+        name="%"
+        type="button"
+      >
+        %
+      </button>
+      <button
+        class="btn orange"
+        name="÷"
+        type="button"
+      >
+        ÷
+      </button>
+      <br />
+      <button
+        class="btn"
+        name="7"
+        type="button"
+      >
+        7
+      </button>
+      <button
+        class="btn"
+        name="8"
+        type="button"
+      >
+        8
+      </button>
+      <button
+        class="btn"
+        name="9"
+        type="button"
+      >
+        9
+      </button>
+      <button
+        class="btn orange"
+        name="x"
+        type="button"
+      >
+        x
+      </button>
+      <br />
+      <button
+        class="btn"
+        name="4"
+        type="button"
+      >
+        4
+      </button>
+      <button
+        class="btn"
+        name="5"
+        type="button"
+      >
+        5
+      </button>
+      <button
+        class="btn"
+        name="6"
+        type="button"
+      >
+        6
+      </button>
+      <button
+        class="btn orange"
+        name="-"
+        type="button"
+      >
+        -
+      </button>
+      <br />
+      <button
+        class="btn"
+        name="1"
+        type="button"
+      >
+        1
+      </button>
+      <button
+        class="btn"
+        name="2"
+        type="button"
+      >
+        2
+      </button>
+      <button
+        class="btn"
+        name="3"
+        type="button"
+      >
+        3
+      </button>
+      <button
+        class="btn orange"
+        name="+"
+        type="button"
+      >
+        +
+      </button>
+      <br />
+      <button
+        class="zero"
+        name="0"
+        type="button"
+      >
+        0
+      </button>
+      <button
+        class="btn"
+        name="."
+        type="button"
+      >
+        .
+      </button>
+      <button
+        class="btn orange"
+        name="="
+        type="button"
+      >
+        =
+      </button>
+    </div>
+  </div>
+</div>
+`;
