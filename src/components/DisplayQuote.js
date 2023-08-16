@@ -17,7 +17,7 @@ function DisplayQuote() {
           });
         if (res.ok) {
           const result = await res.json();
-          setData(result);
+          setData(result[0]);
         } else {
           setError('Failed to fetch quote');
         }
@@ -29,16 +29,26 @@ function DisplayQuote() {
     fetchData();
   }, []);
 
+  if (error) {
+    return (
+      <div className="quote error">
+        Error:
+        {error}
+      </div>
+    );
+  }
+
   return (
     <div>
-      { error ? 'Failed to fetch quote' : null }
       {isLoading
         ? (<p className="loader">Loading...</p>)
         : (
           <p className="quote">
-            {data.map((item) => (
-              `${item.quote} - ${item.author}`
-            ))}
+
+            {data.quote}
+            -
+            {data.author}
+
           </p>
         )}
     </div>
