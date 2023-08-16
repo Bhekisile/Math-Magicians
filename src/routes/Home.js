@@ -6,7 +6,7 @@ function Home() {
     <div>
       <h2 style={{ margin: '60px 140px' }}>Welcome to our page!</h2>
       <div className="text-wrapper">
-        <LoremIpsum avgSentencesPerParagraph={10} p={2} />
+        <LoremIpsum avgSentencesPerParagraph={10} random={false} p={2} />
       </div>
     </div>
   );
