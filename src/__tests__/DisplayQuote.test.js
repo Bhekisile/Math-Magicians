@@ -29,13 +29,15 @@ describe('display quote', () => {
 
   test('displays fetched quote', async () => {
     const quote = 'Test quote';
+
     jest.spyOn(global, 'fetch').mockImplementation(() => Promise.resolve({
       ok: true,
-      json: () => Promise.resolve([{ quote }]),
+      json: () => Promise.resolve([{ quote, author: 'Test author' }]),
     }));
 
     const { findByText } = await act(async () => render(<DisplayQuote />));
-    const quoteElement = await findByText(quote);
+
+    const quoteElement = await findByText(new RegExp(quote));
     expect(quoteElement).toBeInTheDocument();
 
     global.fetch.mockRestore();
