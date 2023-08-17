@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`display quote render quote 1`] = `
+<DocumentFragment>
+  <div>
+    <p
+      class="loader"
+    >
+      Loading...
+    </p>
+  </div>
+</DocumentFragment>
+`;
